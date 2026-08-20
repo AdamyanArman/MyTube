@@ -1,0 +1,23 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    {% block content %}
+        <h2>Hi, you can login and enjoy ad-free videos</h2>
+
+        <div id="register-login-href-div">
+            <a href="{% url 'login' %}" class="register-login-href">Login</a>
+            <a href="{% url 'register' %}" class="register-login-href">Register</a>
+        </div>
+    {% endblock %}
+</body>
+</html>

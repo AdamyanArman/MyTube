@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<a href="javascript:history.back()">← Go Back</a>
+<form method="POST" action="{% url 'register' %}" id="register-login-form">
+    {% csrf_token %}
+    <h2 style="margin: 15px auto;">Register</h2>
+    <input class="login-password" type="text" name="phone" placeholder="+37400000000">
+
+    <input class="login-password" type="password" name="password1" placeholder="Password">
+
+    <input class="login-password" type="password" name="password2" placeholder="Password">
+
+    <button type="submit">Register</button>
+</form>
+
+{% endblock %}

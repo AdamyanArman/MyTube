@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+    {% block content %}
+
+    <a href="javascript:history.back()">← Go Back</a>
+    <h1>MyTube</h1>
+
+    <a href="{% url 'logout' %}" class="logout">Logout</a>
+
+    <form action="{% url 'search' %}" method="GET" class="search-box">
+        <input type="text" name="q" placeholder="Search..." value="{{ query }}" required>
+        <button type="submit">Search</button>
+    </form>
+
+
+    <div id="player-container">
+        <div id="now-playing">Loading stream...</div>
+        <video id="video-player" controls autoplay playsinline webkit-playsinline></video>
+    </div>
+
+    <div id="loading-msg" class="loading">Loading...</div>
+
+    <div class="results">
+        {% for video in results %}
+        <div class="video-card" onclick="loadAndPlay('{{ video.id }}', '{{ video.title}}')">
+            <img src="{{ video.thumbnail }}" alt="Thumbnail">
+            <div class="video-info">
+                <div class="video-title">{{ video.title }}</div>
+                <div class="video-uploader">{{ video.uploader }}</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+
+
+
+
+
+    {% endblock %}

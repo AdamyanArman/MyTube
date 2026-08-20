@@ -1,0 +1,301 @@
+body {
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #fff;
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 0 20px;
+    border: 1px solid white;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#register-login-href-div{
+    display: flex;
+    gap: 55px;
+}
+
+.register-login-href{
+    font-size: 25px;
+    text-decoration: none;
+}
+
+#register-login-form{
+    position: relative;
+    margin: 150px auto;
+    border: 1px solid white;
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background: #1f1f1f;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    gap: 25px;
+}
+
+.login-password{
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background: #1f1f1f;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    color: #ff3333;
+}
+
+.search-box {
+    display: flex;
+    width: 650px;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 4;   /* 80% */
+    border-radius: 15px;
+    border: none;
+    padding: 0px 20px;
+}
+
+.search-box button {
+    flex: 1;   /* 20% */
+    border-radius: 15px;
+    border: none;
+}
+
+
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background: #ff3333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #cc0000;
+}
+
+/* Video Player Section */
+#player-container {
+    display: none;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+video {
+    width: 100%;
+    max-height: 500px;
+    outline: none;
+    display: block;
+}
+
+#now-playing {
+    padding: 12px;
+    font-weight: bold;
+    font-size: 18px;
+    background: #1f1f1f;
+    word-break: break-word;
+}
+
+/* Video Results Grid */
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.video-card {
+    display: flex;
+    gap: 15px;
+    background: #1f1f1f;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.video-card:hover {
+    background: #2a2a2a;
+}
+
+.video-card img {
+    width: 140px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.video-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.video-title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.video-uploader {
+    font-size: 13px;
+    color: #aaa;
+}
+
+.loading {
+    text-align: center;
+    color: #aaa;
+    font-style: italic;
+    display: none;
+    margin: 15px 0;
+}
+
+
+.logout{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+    body {
+        display: flex;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 80vh; /* ՓՈԽԱՐԵՆՔ ֆիքսված 350px-ին. սա թույլ է տալիս մարմնին ձգվել ըստ բովանդակության */
+        width: 100%;
+        margin: 15px auto;
+        padding: 16px 12px;
+        box-sizing: border-box;
+        background: #121212;
+        color: #fff;
+        border: none;
+        border-radius: 15px;
+    }
+
+    #register-login-form {
+        width: 100%;
+        max-width: 100%; /* ՀԵՌԱՑՐԵՑԻ 480px սահմանափակումը. այժմ ձևը զբաղեցնում է հասանելի ամբողջ լայնությունը */
+        margin: 20px auto;
+        padding: 80px 16px; /* մի փոքր կրճատեցի, որ ներքին դաշտերն ավելի լայն լինեն */
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        box-sizing: border-box;
+    }
+
+    #register-login-form input {
+    width: 100%;
+    font-size: 15px;
+    padding: 0px 20px;
+
+    /* 🔥 ՀԻՄՆԱԿԱՆ ՓՈՓՈԽՈՒԹՅՈՒՆՆԵՐԸ 🔥 */
+    height: 10px !important;
+    line-height: 20px !important;
+
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+
+    /* Անջատում ենք բրաուզերի ստանդարտ ոճավորումը, որը հաճախ ավելացնում է լրացուցիչ բարձրություն */
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+    #register-login-form input:focus {
+        border-color: #ff3333;
+    }
+
+    #register-login-href-div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 30px;
+        justify-content: center;
+        margin-top: 8px;
+    }
+
+    #register-login-href-div a {
+        font-size: 16px;
+        text-decoration: none;
+        color: #007bff;
+    }
+
+    #register-login-form button[type="submit"] {
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        background: #ff3333;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.2s;
+        font-weight: bold;
+    }
+
+    #register-login-form button[type="submit"]:hover {
+        background: #cc0000;
+    }
+
+
+    .search-box {
+        display: flex;
+        width: 400px;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .search-box input {
+        flex: 4;   /* 80% */
+        border-radius: 15px;
+        border: none;
+        padding: 0px 20px;
+    }
+
+    .search-box button {
+        flex: 1;   /* 20% */
+        border-radius: 15px;
+        border: none;
+}
+
+}
+
+
