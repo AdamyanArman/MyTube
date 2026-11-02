@@ -77,11 +77,12 @@ def get_stream(request):
         "quiet": True,
         "extractor_args": {
             "youtube": {
-                "player_client": ["web", "android", "mweb"]
+                "player_client": ["mweb", "android", "web", "tv"]
             }
         },
         "socket_timeout": 30,
         "geo_bypass": True,
+        "nocheckcertificate": True,
     }
 
     try:
