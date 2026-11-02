@@ -6,3 +6,4 @@ django-phonenumber-field[phonenumberslite]
 yt_dlp
 python-dotenv
 gunicorn
+whitenoise
