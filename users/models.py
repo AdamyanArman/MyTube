@@ -21,18 +21,6 @@ class Account(models.Model):
     def __str__(self):
         return f'{self.first_name} {self.last_name} {self.phone}'
 
-    @property
-    def is_authenticated(self):
-        return True
-
-    @property
-    def is_anonymous(self):
-        return False
-
-    @property
-    def is_active(self):
-        return True
-
     def set_password(self, raw_password):
         password_bytes=raw_password.encode('utf-8')
         print(f'password bytes {password_bytes}')
